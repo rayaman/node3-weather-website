@@ -53,7 +53,7 @@ app.get('/weather', (req, res) => {
         forecast(latitude, longitude, (error, data) => {
             if (error) return res.send({ error })
             res.send({
-                forecast: data.summery + " It is currently " + data.temperature + " There is a " + data.precipProbability + "% of rain.",
+                summary: data.summery + " It is currently " + data.temperature + " There is a " + data.precipProbability + "% of rain. Current Visibility is " + data.visibility,
                 address: req.query.address,
                 location
             })

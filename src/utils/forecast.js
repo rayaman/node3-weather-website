@@ -12,7 +12,8 @@ const forecast = (lat, long, callback) => {
             callback(undefined, {
                 summery: body.daily.data[0].summary,
                 temperature: body.currently.temperature,
-                precipProbability: body.currently.precipProbability
+                precipProbability: body.currently.precipProbability,
+                visibility: body.currently.visibility,
             })
             return
         }
